@@ -22,6 +22,8 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
+    game = discord.Game("Use $help")
+    await bot.change_presence(activity=game)
     print(f"Logged in as {bot.user}")
 
 
